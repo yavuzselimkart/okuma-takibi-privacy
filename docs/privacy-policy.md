@@ -9,15 +9,15 @@ By using the App, you agree to this Privacy Policy.
 
 ## 📍 1. Permissions and Their Use
 
-The App only uses permissions that are strictly necessary for its core functionality:
+The App only uses permissions that are strictly necessary for its core functionality.
 
 ### 1.1 Camera Permission
 - The camera permission is used **only when the user explicitly initiates taking a photo**.
 - The camera is **never accessed in the background** or without user interaction.
 
 ### 1.2 Gallery / Photo Selection
-- Selecting images from the gallery is done via the **Android System Photo Picker**.
-- The App does **not request broad or persistent access** to the user’s entire photo or video library.
+- Selecting images from the gallery is performed via the **Android System Photo Picker**.
+- The App does **not request READ_MEDIA_\*** permissions and does **not request broad or persistent access** to the user’s entire photo or video library.
 - Only images explicitly selected by the user are accessed.
 
 ### 1.3 Advertising ID (AD_ID)
@@ -34,15 +34,15 @@ https://policies.google.com/privacy
 
 ### 2.1 Cover Image (Photo)
 - The book cover image taken or selected by the user is stored **locally on the device**.
-- To extract book information such as **title, author, and page count**, the **base64-encoded content** of the image is sent over an encrypted connection (HTTPS/TLS) to the following endpoint:
+- To extract book information such as **title, author, and page count**, the **base64-encoded content** of the cover image is sent over an encrypted connection (HTTPS/TLS) to the following endpoint:
 
 https://api.readingtracker.yazilimkodu.com/api/chat/ask
 
 - The image is used solely for this purpose and is **not used for marketing or advertising**.
 
 ### 2.2 Anonymous Device Identifier (UUID)
-- To limit requests and prevent abuse, the App generates an **anonymous UUID** that is stored locally on the device (via SharedPreferences).
-- This identifier is sent in the request headers when communicating with the server.
+- To limit requests and prevent abuse, the App generates an **anonymous UUID** that is stored locally on the device using **SharedPreferences**.
+- This UUID is sent to the API **in the request headers** when communicating with the server.
 - The UUID:
   - Does not contain personal data
   - Does not directly identify the user
@@ -59,8 +59,8 @@ https://api.readingtracker.yazilimkodu.com/api/chat/ask
 
 ## 🔒 3. Data Storage and Deletion
 
-- Images and app data are stored **only on the user’s device**, within the app’s local storage.
-- When the App is uninstalled, **all local data is automatically deleted**.
+- Images and app-related data are stored **only on the user’s device**, within the app’s local storage.
+- When the App is uninstalled, **all locally stored images and data are automatically deleted**.
 - Currently, the App does **not** include:
   - Cloud backups
   - User accounts
@@ -73,12 +73,12 @@ If such features are added in the future, this Privacy Policy will be updated ac
 ## 🔁 4. Data Sharing
 
 The App:
-- Does **not sell, rent, or share** personal data for marketing purposes.
+- Does **not sell or share data for marketing or advertising purposes**.
 
-Data may be shared **only for the following limited purposes**:
+Data is shared **only in a limited and purpose-bound manner** with the following services:
 
 1. **Cover Extraction API**
-   - Shared data: Cover image (base64) + anonymous device UUID
+   - Shared data: Base64-encoded cover image + anonymous device UUID
    - Purpose: Book information extraction
 
 2. **Google Mobile Ads (AdMob)**
@@ -89,8 +89,8 @@ Data may be shared **only for the following limited purposes**:
 
 ## 🛡️ 5. Security
 
-- All server communication is protected using **TLS / HTTPS**.
-- Technical measures are taken to prevent unauthorized access and misuse.
+- All communication with servers is protected using **TLS / HTTPS**.
+- Technical measures are implemented to prevent unauthorized access and misuse.
 - Users may contact us via email to exercise their data protection rights.
 
 ---
