@@ -36,11 +36,7 @@ https://policies.google.com/privacy
 - The book cover image taken or selected by the user is stored **locally on the device**.
 - To extract book information such as **title, author, and page count**, the **base64-encoded content** of the image is sent over an encrypted connection (HTTPS/TLS) to the following endpoint:
 
-```
-
-[https://api.readingtracker.yazilimkodu.com/api/chat/ask](https://api.readingtracker.yazilimkodu.com/api/chat/ask)
-
-```
+https://api.readingtracker.yazilimkodu.com/api/chat/ask
 
 - The image is used solely for this purpose and is **not used for marketing or advertising**.
 
