@@ -1,76 +1,135 @@
-# 📄 Reading Tracker – Gizlilik Politikası
+# 📄 Reading Tracker – Privacy Policy
 
-**Son Güncelleme:** 23 Ekim 2025  
+**Last Updated:** December 14, 2025
 
-Bu Gizlilik Politikası, Reading Tracker (“Uygulama”) tarafından sağlanan hizmetleri kullanan kişilerin bilgilerinin hangi koşullarda toplandığını, kullanıldığını, saklandığını ve korunduğunu açıklamaktadır. Uygulamayı kullanarak bu politikayı kabul ettiğinizi beyan etmiş olursunuz.
-
----
-
-## 📍 1. Toplanan Veriler ve Amaçları
-
-Uygulama, aşağıdaki kapsamda veri toplayabilir:
-
-### **1.1 Kamera Erişimi**
-- Uygulama, yalnızca **kullanıcı tarafından başlatılan fotoğraf çekme** işlemleri için `Kamera` izni talep eder.
-- Çekilen fotoğraflar **cihaz içinde saklanır** ve kullanıcı aksini belirtmediği sürece cihaz dışına aktarılmaz.
-
-### **1.2 Cihaz Depolama / Medya Erişimi**
-- Fotoğrafları kaydetmek, görüntülemek veya kullanıcı tarafından seçilen görselleri almak amacıyla cihaz dosyalarına geçici erişim sağlanır.
-- Her türlü medya erişimi, yalnızca kullanıcının etkileşimi ve onayı sonucu gerçekleşir.
-
-> **Önemli Not:** Uygulama herhangi bir kişisel veriyi **satmaz**, **lisanslamaz** ve **üçüncü taraflarla pazarlama amacıyla paylaşmaz**.
+This Privacy Policy explains how Reading Tracker (“the App”) processes, stores, and protects user information.  
+By using the App, you agree to this Privacy Policy.
 
 ---
 
-## 🔒 2. Verilerin Saklanması ve Güvenliği
+## 📍 1. Permissions and Their Use
 
-- Uygulama, görselleri **yalnızca cihazda yerel olarak** saklar.
-- Veriler, sunucuya iletilmez veya çevrimiçi olarak depolanmaz (sunucu entegrasyonu eklenene kadar geçerlidir).
-- Kullanıcı, uygulamayı kaldırdığında tüm yerel veriler cihazdan silinir.
+The App only uses permissions that are strictly necessary for its core functionality:
 
-Eğer ileride bulut yedekleme, senkronizasyon veya hesap sistemi eklenirse bu Gizlilik Politikası güncellenerek kullanıcılara bildirilecektir.
+### 1.1 Camera Permission
+- The camera permission is used **only when the user explicitly initiates taking a photo**.
+- The camera is **never accessed in the background** or without user interaction.
 
----
+### 1.2 Gallery / Photo Selection
+- Selecting images from the gallery is done via the **Android System Photo Picker**.
+- The App does **not request broad or persistent access** to the user’s entire photo or video library.
+- Only images explicitly selected by the user are accessed.
 
-## 🧩 3. Üçüncü Taraf Hizmetler
+### 1.3 Advertising ID (AD_ID)
+- The App uses **Google Mobile Ads (AdMob)**.
+- The Advertising ID (AD_ID) is used to serve personalized or non-personalized ads.
+- Ad-related data is processed in accordance with Google’s own privacy policy.
 
-Uygulamada kullanılan bazı paketler ve servisler, belirli izinlerin çalışmasını sağlar:
-
-- **image_picker**: Kamera veya galeriden görsel seçmeyi sağlar.
-
-Bu paketler, yalnızca kullanım amacına uygun olarak çalışır; kişisel verileri bağımsız olarak toplamaz veya işlemez.  
-İleride ek bir üçüncü taraf hizmeti kullanılması durumunda bu bölüm güncellenecektir.
-
----
-
-## 👶 4. Çocukların Gizliliği
-
-Uygulama çocukları hedeflememektedir.  
-13 yaşın altındaki bireylerden bilerek hiçbir kişisel veri toplanmaz.
+**AdMob Privacy Policy:**  
+https://policies.google.com/privacy
 
 ---
 
-## 🌍 5. Uluslararası Kullanım
+## 🖼️ 2. Data Collected and How It Is Used
 
-Uygulama küresel olarak kullanılabilir.  
-Bazı bölgelerdeki kullanıcılar ilgili yasalar gereği ek haklara sahip olabilir (örn. GDPR, KVKK).  
-Bu tür talepler için iletişime geçebilirsiniz.
+### 2.1 Cover Image (Photo)
+- The book cover image taken or selected by the user is stored **locally on the device**.
+- To extract book information such as **title, author, and page count**, the **base64-encoded content** of the image is sent over an encrypted connection (HTTPS/TLS) to the following endpoint:
+
+```
+
+[https://api.readingtracker.yazilimkodu.com/api/chat/ask](https://api.readingtracker.yazilimkodu.com/api/chat/ask)
+
+```
+
+- The image is used solely for this purpose and is **not used for marketing or advertising**.
+
+### 2.2 Anonymous Device Identifier (UUID)
+- To limit requests and prevent abuse, the App generates an **anonymous UUID** that is stored locally on the device (via SharedPreferences).
+- This identifier is sent in the request headers when communicating with the server.
+- The UUID:
+  - Does not contain personal data
+  - Does not directly identify the user
+  - Is not used for advertising or marketing purposes
+
+### 2.3 Advertising Data
+- Google Mobile Ads SDK (AdMob) may process:
+  - Advertising ID
+  - Device information
+  - Approximate location and interaction signals  
+  in accordance with its own policies.
 
 ---
 
-## 📬 6. İletişim
+## 🔒 3. Data Storage and Deletion
 
-Bu Gizlilik Politikası ile ilgili her türlü soru, yorum veya talep için bizimle iletişime geçebilirsiniz:
+- Images and app data are stored **only on the user’s device**, within the app’s local storage.
+- When the App is uninstalled, **all local data is automatically deleted**.
+- Currently, the App does **not** include:
+  - Cloud backups
+  - User accounts
+  - Server-side persistent storage
 
-**E-posta:** y.selimkart@gmail.com
-*(Eğer farklı bir e-posta kullanıyorsanız güncelleyiniz.)*
+If such features are added in the future, this Privacy Policy will be updated accordingly.
 
 ---
 
-## ✏️ 7. Değişiklikler
+## 🔁 4. Data Sharing
 
-Bu Gizlilik Politikası zaman zaman güncellenebilir.  
-Politikada değişiklik yapılması halinde güncelleme tarihi yukarıda belirtilecektir.  
-Güncellemeler, bu sayfa üzerinden yayınlandığı anda geçerli olur.
+The App:
+- Does **not sell, rent, or share** personal data for marketing purposes.
 
+Data may be shared **only for the following limited purposes**:
 
+1. **Cover Extraction API**
+   - Shared data: Cover image (base64) + anonymous device UUID
+   - Purpose: Book information extraction
+
+2. **Google Mobile Ads (AdMob)**
+   - Shared data: Advertising-related data
+   - Purpose: Ad display
+
+---
+
+## 🛡️ 5. Security
+
+- All server communication is protected using **TLS / HTTPS**.
+- Technical measures are taken to prevent unauthorized access and misuse.
+- Users may contact us via email to exercise their data protection rights.
+
+---
+
+## 👶 6. Children’s Privacy
+
+- The App is **not intended for children under the age of 13**.
+- No personal data is knowingly collected from children under 13.
+- If such data is identified, it will be deleted immediately.
+
+---
+
+## 🌍 7. International Use and User Rights
+
+The App is available globally.  
+Depending on their location, users may have rights under applicable data protection laws, including:
+
+- Access to their data
+- Requesting deletion of data
+- Objecting to data processing  
+
+(e.g. GDPR, KVKK, and similar regulations)
+
+---
+
+## 📬 8. Contact
+
+For any questions or requests regarding this Privacy Policy:
+
+**Email:** y.selimkart@gmail.com
+
+---
+
+## ✏️ 9. Changes
+
+This Privacy Policy may be updated from time to time.  
+Any changes take effect once published on this page.  
+The latest update date is always shown at the top of this document.
