@@ -28,6 +28,15 @@ The App only uses permissions that are strictly necessary for its core functiona
 **AdMob Privacy Policy:**  
 https://policies.google.com/privacy
 
+### 1.4 Notification Permission (Android 13+)
+- On devices running **Android 13 (API level 33) or higher**, the App may request the **POST_NOTIFICATIONS** permission.
+- This permission is used **only to display local (on-device) notifications** related to reading goals.
+- Notifications are:
+  - Fully optional and configurable by the user
+  - Not used for advertising or marketing
+  - Not used to track users
+- The App does **not** send remote or server-based push notifications.
+
 ---
 
 ## 🖼️ 2. Data Collected and How It Is Used
@@ -55,12 +64,24 @@ https://api.readingtracker.yazilimkodu.com/api/chat/ask
   - Approximate location and interaction signals  
   in accordance with its own policies.
 
+### 2.4 Local Reading Goal Notifications
+- The App may generate **local notifications** to support daily reading goals.
+- Notification behavior is fully controlled by the user and may include:
+  - Customizable time ranges
+  - Notification frequency settings
+  - A daily maximum notification limit
+- Notifications automatically **stop once the daily reading goal is reached**.
+- When a daily goal is completed, the App may display a confirmation message such as:  
+  **“You’ve reached today’s goal.”**
+- All notification logic runs **entirely on the device**.
+- No notification-related data is sent to external servers.
+
 ---
 
 ## 🔒 3. Data Storage and Deletion
 
-- Images and app-related data are stored **only on the user’s device**, within the app’s local storage.
-- When the App is uninstalled, **all locally stored images and data are automatically deleted**.
+- Images, notification settings, and app-related data are stored **only on the user’s device**, within the app’s local storage.
+- When the App is uninstalled, **all locally stored images, preferences, and data are automatically deleted**.
 - Currently, the App does **not** include:
   - Cloud backups
   - User accounts
@@ -90,7 +111,7 @@ Data is shared **only in a limited and purpose-bound manner** with the following
 ## 🛡️ 5. Security
 
 - All communication with servers is protected using **TLS / HTTPS**.
-- Technical measures are implemented to prevent unauthorized access and misuse.
+- Technical and organizational measures are implemented to prevent unauthorized access and misuse.
 - Users may contact us via email to exercise their data protection rights.
 
 ---
