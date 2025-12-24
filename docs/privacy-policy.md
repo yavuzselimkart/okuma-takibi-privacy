@@ -1,152 +1,154 @@
-# 📄 Okuma Takibi – Privacy Policy
+# 📄 Okuma Takibi – Gizlilik Politikası
 
-**Last Updated:** December 25, 2025
+**Son Güncelleme:** 25 Aralık 2025
 
-This Privacy Policy explains how **Okuma Takibi** (“the App”) processes, stores, and protects user information.  
-By using the App, you agree to this Privacy Policy.
+Bu Gizlilik Politikası, **Okuma Takibi** (“Uygulama”) tarafından kullanıcı bilgilerinin nasıl işlendiğini, saklandığını ve korunduğunu açıklar.  
+Uygulamayı kullanarak bu Gizlilik Politikası’nı kabul etmiş olursunuz.
 
 ---
 
-## 📍 1. Permissions and Their Use
+## 📍 1. İzinler ve Kullanım Amaçları
 
-The App only uses permissions that are strictly necessary for its core functionality.
+Uygulama, yalnızca temel işlevlerini yerine getirmek için gerekli olan izinleri kullanır.
 
-### 1.1 Camera Permission
-- The camera permission is used **only when the user explicitly initiates taking a photo**.
-- The camera is **never accessed in the background** or without user interaction.
+### 1.1 Kamera İzni
+- Kamera izni **yalnızca kullanıcı açıkça fotoğraf çekmeyi başlattığında** kullanılır.
+- Kamera **arka planda**, kullanıcıdan habersiz veya otomatik olarak **asla kullanılmaz**.
 
-### 1.2 Gallery / Photo Selection
-- Selecting images from the gallery is performed via the **Android System Photo Picker**.
-- The App does **not request READ_MEDIA_\*** permissions and does **not request broad or persistent access** to the user’s entire photo or video library.
-- Only images explicitly selected by the user are accessed.
+### 1.2 Galeri / Fotoğraf Seçimi
+- Galeriden fotoğraf seçimi **Android Sistem Fotoğraf Seçici (Photo Picker)** üzerinden yapılır.
+- Uygulama **READ_MEDIA_\*** izinlerini talep etmez ve kullanıcının tüm fotoğraf veya video arşivine **geniş ya da kalıcı erişim istemez**.
+- Yalnızca kullanıcının **bilinçli olarak seçtiği görsellere** erişilir.
 
-### 1.3 Advertising ID (AD_ID)
-- The App uses **Google Mobile Ads (AdMob)**.
-- The Advertising ID (AD_ID) is used to serve personalized or non-personalized ads.
-- Ad-related data is processed in accordance with Google’s own privacy policy.
+### 1.3 Reklam Kimliği (AD_ID)
+- Uygulama **Google Mobile Ads (AdMob)** kullanmaktadır.
+- Reklam Kimliği (AD_ID), kişiselleştirilmiş veya kişiselleştirilmemiş reklamlar göstermek amacıyla kullanılabilir.
+- Reklamlarla ilgili veriler Google’ın kendi gizlilik politikalarına uygun olarak işlenir.
 
-**AdMob Privacy Policy:**  
+**AdMob Gizlilik Politikası:**  
 https://policies.google.com/privacy
 
-### 1.4 Notification Permission (Android 13+)
-- On devices running **Android 13 (API level 33) or higher**, the App may request the **POST_NOTIFICATIONS** permission.
-- This permission is used **only to display local (on-device) notifications** related to reading goals.
-- Notifications are:
-  - Fully optional and configurable by the user
-  - Not used for advertising or marketing
-  - Not used to track users
-- The App does **not** send remote or server-based push notifications.
+### 1.4 Bildirim İzni (Android 13+)
+- **Android 13 (API 33)** ve üzeri sürümlerde, Uygulama **POST_NOTIFICATIONS** iznini talep edebilir.
+- Bu izin **yalnızca cihaz üzerinde çalışan yerel bildirimler** için kullanılır.
+- Bildirimler:
+  - Tamamen isteğe bağlıdır
+  - Kullanıcı tarafından ayarlanabilir
+  - Reklam veya pazarlama amacıyla kullanılmaz
+  - Kullanıcı takibi için kullanılmaz
+- Uygulama **sunucu tabanlı (push) bildirim göndermez**.
 
 ---
 
-## 🖼️ 2. Data Collected and How It Is Used
+## 🖼️ 2. Toplanan Veriler ve Kullanım Amaçları
 
-### 2.1 Cover Image (Photo)
-- The book cover image taken or selected by the user is stored **locally on the device**.
-- To extract book information such as **title, author, and page count**, the **base64-encoded content** of the cover image is sent over an encrypted connection (HTTPS/TLS) to the following endpoint:
+### 2.1 Kapak Görseli (Fotoğraf)
+- Kullanıcı tarafından çekilen veya seçilen kitap kapak görselleri **yalnızca cihaz üzerinde** saklanır.
+- Kitap adı, yazar ve sayfa sayısı gibi bilgileri tespit etmek amacıyla, kapak görselinin **base64 formatındaki içeriği**, şifreli bağlantı (HTTPS/TLS) üzerinden aşağıdaki API adresine gönderilir:
 
 https://api.readingtracker.yazilimkodu.com/api/chat/ask
 
-- The image is used solely for this purpose and is **not used for marketing or advertising**.
+- Görseller yalnızca bu amaçla kullanılır ve **reklam veya pazarlama faaliyetlerinde kullanılmaz**.
 
-### 2.2 Anonymous Device Identifier (UUID)
-- To limit requests and prevent abuse, the App generates an **anonymous UUID** that is stored locally on the device using **SharedPreferences**.
-- This UUID is sent to the API **in the request headers** when communicating with the server.
-- The UUID:
-  - Does not contain personal data
-  - Does not directly identify the user
-  - Is not used for advertising or marketing purposes
+### 2.2 Anonim Cihaz Tanımlayıcı (UUID)
+- İstekleri sınırlamak ve kötüye kullanımı önlemek amacıyla, Uygulama cihazda **anonim bir UUID** oluşturur.
+- Bu UUID, **SharedPreferences** aracılığıyla cihazda saklanır.
+- Sunucu ile yapılan isteklerde **başlık (header)** bilgisi olarak gönderilir.
+- UUID:
+  - Kişisel veri içermez
+  - Kullanıcıyı doğrudan tanımlamaz
+  - Reklam veya pazarlama amacıyla kullanılmaz
 
-### 2.3 Advertising Data
-- Google Mobile Ads SDK (AdMob) may process:
-  - Advertising ID
-  - Device information
-  - Approximate location and interaction signals  
-  in accordance with its own policies.
+### 2.3 Reklam Verileri
+- Google Mobile Ads SDK (AdMob) aşağıdaki verileri işleyebilir:
+  - Reklam Kimliği (AD_ID)
+  - Cihaz bilgileri
+  - Yaklaşık konum ve etkileşim sinyalleri  
+  Bu işlemler Google’ın kendi politikalarına tabidir.
 
-### 2.4 Local Reading Goal Notifications
-- The App may generate **local notifications** to support daily reading goals.
-- Notification behavior is fully controlled by the user and may include:
-  - Customizable time ranges
-  - Notification frequency settings
-  - A daily maximum notification limit
-- Notifications automatically **stop once the daily reading goal is reached**.
-- When a daily goal is completed, the App may display a confirmation message such as:  
-  **“You’ve reached today’s goal.”**
-- All notification logic runs **entirely on the device**.
-- No notification-related data is sent to external servers.
-
----
-
-## 🔒 3. Data Storage and Deletion
-
-- Images, notification settings, and app-related data are stored **only on the user’s device**, within the app’s local storage.
-- When the App is uninstalled, **all locally stored images, preferences, and data are automatically deleted**.
-- Currently, the App does **not** include:
-  - Cloud backups
-  - User accounts
-  - Server-side persistent storage
-
-If such features are added in the future, this Privacy Policy will be updated accordingly.
+### 2.4 Yerel Okuma Hedefi Bildirimleri
+- Uygulama, günlük okuma hedeflerini desteklemek amacıyla **yerel bildirimler** oluşturabilir.
+- Bildirim davranışları tamamen kullanıcı kontrolündedir ve şunları içerebilir:
+  - Bildirim zaman aralıkları
+  - Bildirim sıklığı
+  - Günlük maksimum bildirim sayısı
+- Günlük okuma hedefi tamamlandığında bildirimler **otomatik olarak durur**.
+- Hedef tamamlandığında, örneğin şu mesaj gösterilebilir:  
+  **“Bugünkü hedefini tamamladın.”**
+- Tüm bildirim mantığı **yalnızca cihaz üzerinde** çalışır.
+- Bildirimlerle ilgili hiçbir veri sunucuya gönderilmez.
 
 ---
 
-## 🔁 4. Data Sharing
+## 🔒 3. Veri Saklama ve Silme
 
-The App:
-- Does **not sell or share data for marketing or advertising purposes**.
+- Görseller, bildirim ayarları ve uygulama verileri **yalnızca kullanıcının cihazında** saklanır.
+- Uygulama kaldırıldığında, **tüm yerel veriler otomatik olarak silinir**.
+- Uygulamada şu özellikler **bulunmamaktadır**:
+  - Bulut yedekleme
+  - Kullanıcı hesabı
+  - Sunucu taraflı kalıcı veri saklama
 
-Data is shared **only in a limited and purpose-bound manner** with the following services:
+Bu tür özellikler gelecekte eklenirse, Gizlilik Politikası güncellenecektir.
 
-1. **Cover Extraction API**
-   - Shared data: Base64-encoded cover image + anonymous device UUID
-   - Purpose: Book information extraction
+---
+
+## 🔁 4. Veri Paylaşımı
+
+Uygulama:
+- Verileri **pazarlama veya reklam amacıyla satmaz veya paylaşmaz**.
+
+Veriler yalnızca aşağıdaki hizmetlerle, **amaçla sınırlı** olacak şekilde paylaşılır:
+
+1. **Kapak Bilgisi Çıkarma API’si**
+   - Paylaşılan veri: Base64 kapak görseli + anonim cihaz UUID
+   - Amaç: Kitap bilgilerinin tespiti
 
 2. **Google Mobile Ads (AdMob)**
-   - Shared data: Advertising-related data
-   - Purpose: Ad display
+   - Paylaşılan veri: Reklam ile ilgili veriler
+   - Amaç: Reklam gösterimi
 
 ---
 
-## 🛡️ 5. Security
+## 🛡️ 5. Güvenlik
 
-- All communication with servers is protected using **TLS / HTTPS**.
-- Technical and organizational measures are implemented to prevent unauthorized access and misuse.
-- Users may contact us via email to exercise their data protection rights.
-
----
-
-## 👶 6. Children’s Privacy
-
-- The App is **not intended for children under the age of 13**.
-- No personal data is knowingly collected from children under 13.
-- If such data is identified, it will be deleted immediately.
+- Sunucu ile yapılan tüm iletişimler **TLS / HTTPS** ile korunur.
+- Yetkisiz erişimi ve kötüye kullanımı önlemek için teknik ve idari önlemler alınmıştır.
+- Kullanıcılar, veri koruma haklarıyla ilgili talepler için e-posta yoluyla iletişime geçebilir.
 
 ---
 
-## 🌍 7. International Use and User Rights
+## 👶 6. Çocukların Gizliliği
 
-The App is available globally.  
-Depending on their location, users may have rights under applicable data protection laws, including:
-
-- Access to their data
-- Requesting deletion of data
-- Objecting to data processing  
-
-(e.g. GDPR, KVKK, and similar regulations)
+- Uygulama **13 yaş altı çocuklar için tasarlanmamıştır**.
+- 13 yaş altındaki çocuklardan bilerek kişisel veri toplanmaz.
+- Böyle bir durum tespit edilirse, veriler derhal silinir.
 
 ---
 
-## 📬 8. Contact
+## 🌍 7. Uluslararası Kullanım ve Kullanıcı Hakları
 
-For any questions or requests regarding this Privacy Policy:
+Uygulama dünya genelinde kullanılabilir.  
+Kullanıcılar bulundukları ülkeye göre aşağıdaki haklara sahip olabilir:
 
-**Email:** y.selimkart@gmail.com
+- Verilere erişim
+- Verilerin silinmesini talep etme
+- Veri işlemeye itiraz etme  
+
+(GDPR, KVKK ve benzeri mevzuatlar kapsamında)
 
 ---
 
-## ✏️ 9. Changes
+## 📬 8. İletişim
 
-This Privacy Policy may be updated from time to time.  
-Any changes take effect once published on this page.  
-The latest update date is always shown at the top of this document.
+Bu Gizlilik Politikası ile ilgili her türlü soru ve talep için:
+
+**E-posta:** y.selimkart@gmail.com
+
+---
+
+## ✏️ 9. Değişiklikler
+
+Bu Gizlilik Politikası zaman zaman güncellenebilir.  
+Yapılan değişiklikler bu sayfada yayımlandığı anda yürürlüğe girer.  
+En güncel tarih her zaman belgenin üst kısmında belirtilir.
