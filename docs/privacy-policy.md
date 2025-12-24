@@ -1,8 +1,8 @@
-# 📄 Reading Tracker – Privacy Policy
+# 📄 Okuma Takibi – Privacy Policy
 
-**Last Updated:** December 14, 2025
+**Last Updated:** December 25, 2025
 
-This Privacy Policy explains how Reading Tracker (“the App”) processes, stores, and protects user information.  
+This Privacy Policy explains how **Okuma Takibi** (“the App”) processes, stores, and protects user information.  
 By using the App, you agree to this Privacy Policy.
 
 ---
